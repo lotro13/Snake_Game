@@ -1,0 +1,44 @@
+Snake game ->
+  * Snake
+    -> Snake:
+      * Length
+      * Control
+      * Positions
+      * Functions
+        ->Functions:
+          ~ Move(int direction) > void
+          ~ Change length(int delta Length) > void
+          ~ get Input(key Key Pressed) > void
+  * Field
+    -> Field:
+      * Size
+      * Food
+      * Content
+      * Functions
+        ->Functions:
+          ~ Spawn Treat() > (return ? [(int, int)]| void)
+          ~ Draw Field() > void
+          ~ Update Field(?objects[]?) > void
+  * Score
+    ->Score
+      * Value
+      ~ Increase Score(int delta Score) > void
+      ~ Get Score() > integer
+
+  * Menu
+    ->Menu
+      ~ Start() > void
+      ~ Options() > void | ???
+      ~ Exit() > NULL
+
+* - class
+^ - child class
+Probable classes:
+  * Tile - Basic part of a snake, field, treat
+    ^ wall
+    ^ field
+    ^ treat
+    ^ snake_head
+    ^ snake_body
+  * Field - [field high length, field width length] of tiles where, '#' - wall, ' ' - field
+  * Snake - <int x, int y> vector of snake_length elements and one snake_head element
